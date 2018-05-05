@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 扫描所有的包文件 spring-->
+    <context:component-scan base-package="com.graduate.project" />
+
+
+    <!-- 加载数据库配置文件  资源文件-->
+    <context:property-placeholder location="classpath*:mysql-resource.properties" />
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"  destroy-method="close">
+        <property name="driverClassName" value="${jdbc.driver}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+    </bean>
+
+    <!-- 会话工厂 mybaties封装-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 为工厂配置数数据源 -->
+        <property name="dataSource" ref="dataSource" />
+        <!--mybatis的配置文件-->
+        <property name="configLocation" value="classpath:mybatis/mybatis.xml" />
+        <!-- 加载映射文件  -->
+        <property name="mapperLocations" value="classpath:xmlmapper/*.xml" />
+    </bean>
+    <!-- 映射 -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 接口于配置文件的映射 会话工厂-->
+        <property name="basePackage" value="com.graduate.project.mapper" />
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+    </bean>
+
+    <!--事务管理 查！！！-->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--注入dataSource-->
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <!--开启事务注解扫描-->
+    <!--<tx:annotation-driven transaction-manager="transactionManager" />-->
+
+
+</beans>
