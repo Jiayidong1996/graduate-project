@@ -1,17 +1,47 @@
 package com.graduate.project.entity;
 
-public class Desk extends DeskKey {
+public class Desk {
+    private Integer deskId;
+
+    private String areaId;
+
     private String deskname;
 
     private String deskstate;
 
     private String deskremark;
 
-    public Desk(Integer deskid, String areaid, String deskname, String deskstate, String deskremark) {
-        super(deskid, areaid);
+    public Desk( String deskname, String deskstate, String deskremark) {
+        //super(deskid, areaid);
         this.deskname = deskname;
         this.deskstate = deskstate;
         this.deskremark = deskremark;
+    }
+
+    //test!!!
+    public Desk( Integer deskId,String areaId,String deskname, String deskstate, String deskremark) {
+       // super(deskId, areaId);
+        this.deskId=deskId;
+        this.areaId=areaId;
+        this.deskname = deskname;
+        this.deskstate=deskstate;
+        this.deskremark = deskremark;
+    }
+
+    public String getAreaId() {
+        return areaId;
+    }
+
+    public void setAreaId(String areaId) {
+        this.areaId = areaId;
+    }
+
+    public Integer getDeskId() {
+        return deskId;
+    }
+
+    public void setDeskId(Integer deskId) {
+        this.deskId = deskId;
     }
 
     public Desk() {

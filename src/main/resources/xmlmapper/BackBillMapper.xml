@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduate.project.mapper.BillMapper" >
+
+    <!--通过ID查询单据粗略信息-->
+    <select id="findBillById" parameterType="int" resultType="com.graduate.project.entity.Bill">
+        SELECT * from bill WHERE billid=#{billid}
+    </select>
+
+    <!--通过ID查询订单粗略信息-->
+    <select id="findBillInfoById"  resultType="com.graduate.project.entity.BillInfo">
+        SELECT * from billinfo WHERE billid=#{billid}
+    </select>
+
+    <select id="findBillInfoTest" resultType="com.graduate.project.entity.BillInfoVO">
+        select billinfo.billid,billinfo.dishid,billinfo.dishnum,dish.dishname,dish.dishprice
+        from billinfo , dish
+        where billinfo.dishid=dish.dishid
+        and billinfo.billid=#{billid}
+    </select>
+
+    <!--列出单据信息-->
+    <select id="listBill"  resultType="com.graduate.project.entity.Bill">
+        SELECT * from bill
+    </select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -29,4 +29,12 @@ public interface DeskMapper {
     int updateByPrimaryKeySelective(Desk record);
 
     int updateByPrimaryKey(Desk record);
+
+    //首页商品信息显示 有限个
+    public List<Desk> selectDeskForIndex();
+
+    //分页显示所有商品
+    public List<Desk> selectAllByPage(int index);
+
+
 }

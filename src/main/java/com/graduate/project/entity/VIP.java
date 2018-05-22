@@ -1,6 +1,9 @@
 package com.graduate.project.entity;
 
+import sun.util.calendar.LocalGregorianCalendar;
+
 import java.math.BigDecimal;
+import java.sql.Date;
 
 public class VIP {
     private Integer vipid;
@@ -13,11 +16,12 @@ public class VIP {
 
     private BigDecimal vipdiscount;
 
-    private String vipbirth;
+    /*private String vipbirth;*/
+    private Date vipbirth;
 
     private String vipaddress;
 
-    public VIP(Integer vipid, String vipname, Integer vipphone, BigDecimal vipbalance, BigDecimal vipdiscount, String vipbirth, String vipaddress) {
+    public VIP(Integer vipid, String vipname, Integer vipphone, BigDecimal vipbalance, BigDecimal vipdiscount, Date vipbirth, String vipaddress) {
         this.vipid = vipid;
         this.vipname = vipname;
         this.vipphone = vipphone;
@@ -71,12 +75,12 @@ public class VIP {
         this.vipdiscount = vipdiscount;
     }
 
-    public String getVipbirth() {
+    public Date getVipbirth() {
         return vipbirth;
     }
 
-    public void setVipbirth(String vipbirth) {
-        this.vipbirth = vipbirth == null ? null : vipbirth.trim();
+    public void setVipbirth(Date vipbirth) {
+        this.vipbirth = vipbirth ;
     }
 
     public String getVipaddress() {

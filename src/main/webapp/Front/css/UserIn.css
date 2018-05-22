@@ -1,0 +1,442 @@
+.header {
+   		height: 110px;
+   		background: transparent url("//misc.360buyimg.com/user/reg/1.0.0/css/i/headbg.jpg") repeat-x scroll left bottom;
+	}
+	
+	.root61 .w {
+   		width: 1210px;
+   	 }
+   	 body {
+		font: 14px/150% tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"u5b8bu4f53",sans-serif;
+    	font-family: tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"u5b8bu4f53",sans-serif;
+    	font-style: normal;
+    	font-weight: normal;
+    	font-size: 14px;
+    	line-height: 150%;
+    	font-size-adjust: none;
+    	font-stretch: normal;
+    	-x-system-font: none;
+    	font-feature-settings: normal;
+    	font-language-override: normal;
+    	font-kerning: auto;
+    	font-synthesis: weight style;
+    	font-variant-alternates: normal;
+    	font-variant-caps: normal;
+    	font-variant-east-asian: normal;
+    	font-variant-ligatures: normal;
+    	font-variant-numeric: normal;
+    	font-variant-position: normal;
+		-webkit-font-smoothing:antialiased;
+		color:#666;
+		background:#fff
+		
+	}
+	.w {
+	    width: 990px;
+	    margin: 0px auto;
+	}
+	.clearfix{
+		padding:0px;
+	}
+	.header.logo{
+		width:160px;
+		height:50px;
+		float:left;
+		margin-top:24px;
+	}
+	.header .logo, .i-company, .i-def, .i-error, .i-error1, .i-global, .i-suc {
+	    background: transparent url("//misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png") no-repeat scroll 0% 0%;
+	}
+	.header .logo-title {
+	    float: left;
+	    height: 34px;
+	    line-height: 34px;
+	    font-size: 24px;
+	    color: #333;
+	    padding-left: 30px;
+	    margin-top: 34px;
+	}
+	.header.title{
+		float:left;
+		height:34px;
+		line-height:34px;
+		font-size:24px;
+		color:#333;
+		padding-left:30px;
+		margin-top:34px;
+	}
+	.header .have-account {
+		
+ 		font-size: 16px;
+    	float: right;
+    	margin-top: 55px;
+    	color: #999;
+    }
+    .header .have-account a {
+	    color: #333;
+	}
+    
+	.clearfix::after {
+    	content: ".";
+    	display: block;
+    	height: 0px;
+    	clear: both;
+    	visibility: hidden;
+    	}
+    .main {
+    	margin: 50px auto 60px;
+    	width: 830px;
+    }
+    .reg-form {
+    	width: 400px;
+    }
+     .f1 {
+    	float: left;
+    } 
+    var {
+    	margin: 0px;
+    	padding: 0px;
+	}
+	.reg-other {
+    	float: left;
+    	margin-left: 104px;
+    	height: 605px;
+    	padding-left: 90px;
+    	border-left: 1px solid #E6E6E6;
+    }
+    .reg-other .company-reg {
+	    width: 160px;
+	    height: 60px;
+	    border-bottom: 1px solid #DDD;
+    	border-bottom-width: 1px;
+    	border-bottom-style: solid;
+    	border-bottom-color: #DDD;
+	    margin-left: 30px;
+	}
+	.reg-other .company-reg a {
+    	display: block;
+    	width: 160px;
+    	height: 30px;
+	}
+	a {
+    	color: #666;
+    	text-decoration: none;
+    	text-decoration-color: -moz-use-text-color;
+    	text-decoration-line: none;
+    	text-decoration-style: solid;
+	}
+/* 	.reg-other .company-reg a i {
+    	display: inline-block;
+    	width: 30px;
+    	height: 29px;
+    	vertical-align: middle;
+    	margin-right: 15px;
+	} */
+	.i-company {
+    	background-position: 0px -50px;
+    	display: inline-block;
+    	width: 30px;
+    	height: 29px;
+    	vertical-align: middle;
+    	margin-right: 15px;
+	}
+	.reg-other .company-reg a span {
+    	vertical-align: middle;
+	}
+	
+	.reg-other .inter-cust {
+    	width: 160px;
+    	margin-left: 30px;
+    	margin-top: 30px;
+	}
+	.reg-other .inter-cust a {
+    	display: block;
+    	width: 170px;
+    	height: 40px;
+	}
+	.reg-other .inter-cust a i {
+    	display: inline-block;
+    	width: 30px;
+    	height: 30px;
+    	vertical-align: text-bottom;
+    	margin-right: 15px;
+    	float: left;
+    	margin-top: 7px;
+	}
+	.i-global {
+    	background-position: -50px -50px;
+	}
+	.reg-other .inter-cust a span {
+    	display: inline-block;
+	}
+	.footer {
+    	font-size: 12px;
+    	text-align: center;
+    	border-top: 1px solid #E6E6E6;
+    	color: #999;
+    	padding-bottom: 30px;
+	}
+	.footer .links {
+    	padding-top: 30px;
+    	padding-bottom: 15px;
+	}
+	var {
+    	margin: 0px;
+    	padding: 0px;
+	}
+	.footer a {
+    	color: #999;
+    	margin: 0px 10px;
+	}
+	.form-item {
+    	position: relative;
+    	border: 1px solid #DDD;
+    	width: 398px;
+    	height: 52px;
+    	z-index: 0;
+	}
+	.form-agreen {
+    	color: #333;
+    	font-size: 12px;
+    	word-wrap: break-word;
+    	white-space: nowrap;
+	}
+	.form-item-account {
+    	z-index: 13;
+    	
+	}
+	.form-item label {
+    	float: left;
+    	width: 90px;
+    	height: 52px;
+    	line-height: 52px;
+    	padding-left: 20px;
+	}
+	.form-item txt {
+    	margin-top: 2px !important;
+	}
+	.form-item .field {
+    	border: 0px none;
+    	font-size: 14px;
+    	width: 190px;
+    	height: 19px;
+    	padding-bottom: 11px;
+    	padding-left: 20px;
+    	padding-top: 16px;
+	}
+	.form-item .i-status {
+    	position: absolute;
+    	display: none;
+    	width: 16px;
+    	height: 16px;
+    	top: 20px;
+    	right: 20px;
+	}
+	.form-item-phone .select-country {
+    	width: 104px;
+    	padding: 0px 0px 0px 20px;
+    	height: 52px;
+    	border-width: medium 1px medium medium;
+    	border-style: none solid none none;
+    	border-color: -moz-use-text-color #DDD -moz-use-text-color -moz-use-text-color;
+    	-moz-border-top-colors: none;
+    	-moz-border-right-colors: none;
+    	-moz-border-bottom-colors: none;
+    	-moz-border-left-colors: none;
+    	border-image: none;
+    	color: #666;
+	}
+	.form-item-phone txt {
+    	margin-left: 7px !important;
+	}
+	.form-item-phone input {
+    	padding-left: 7px !important;
+	}
+	.form-item .img-code {
+    	position: absolute;
+    	right: 3px;
+    	top: 3px;
+    	width: 110px;
+    	height: 46px;
+    	cursor: pointer;
+	}
+	.form-item .form-authcode, .form-item .phonecode {
+    	width: 150px;
+	}
+	.btn-phonecode {
+    	position: absolute;
+    	right: 3px;
+    	top: 3px;
+    	width: 110px;
+    	height: 46px;
+    	border: medium none;
+    	background: #F2F2F2 none repeat scroll 0% 0%;
+    	color: #333;
+    	padding: 0px;
+	}
+	.btn-register {
+	    width: 100%;
+	    height: 54px;
+	    color: #FFF;
+	    background: #E22 none repeat scroll 0% 0%;
+	    border: 0px none;
+	    font-size: 16px;
+	    font-family: "Microsoft YaHei","Hiragino Sans GB";
+	}
+	.voiceVerifyDialog .ico {
+	    background: transparent url("//misc.360buyimg.com/user/reg/1.0.0/css/i/icon.png") no-repeat scroll 0% 0%;
+	}
+	img {
+    	border: 0px none;
+    	vertical-align: middle;
+	}
+	
+	button, input, select, textarea {
+    	outline: 0px none;
+	}
+	em, i, u {
+    	font-style: normal;
+	}
+	.input-tip {
+    	color: #C5C5C5;
+    	height: 27px;
+    	font-size: 12px;
+    	padding-top: 5px;
+	}
+	.tips {
+    	position: absolute;
+    	background: #FEF4E5 none repeat scroll 0% 0%;
+    	border: 1px solid #F6C090;
+    	color: #BC5212;
+    	display: none;
+    	padding: 0px 12px;
+    	height: 32px;
+    	text-align: center;
+    	line-height: 32px;
+    	border-radius: 3px;
+    	z-index: 11;
+	}
+	.capslock-tip {
+    	right: 2px;
+    	top: -45px;
+	}
+	.tips .arrow {
+    	width: 0px;
+    	height: 0px;
+    	line-height: 0;
+    	font-size: 0px;
+    	border-color: #F6C090 transparent transparent;
+    	border-style: solid dashed dashed;
+    	border-width: 8px;
+    	position: absolute;
+    	left: 50%;
+    	margin-left: -4px;
+    	bottom: -16px;
+	}
+	.tips .arrow-inner {
+    	width: 0px;
+    	height: 0px;
+    	line-height: 0;
+    	font-size: 0px;
+    	border-color: #FEF4E5 transparent transparent;
+    	border-style: solid dashed dashed;
+    	border-width: 8px;
+    	position: absolute;
+    	left: 50%;
+    	margin-left: -4px;
+    	bottom: -15px;
+	}
+	.item-email-wrap {
+    	display: none;
+    	height: 86px;
+    	position: relative;
+    	z-index: 11;
+	}
+	.item-email-wrap .form-item {
+    	z-index: 11;
+	}
+	.item-email-wrap .orPhone {
+    	position: absolute;
+    	right: 0px;
+    	bottom: 6px;
+    	font-size: 12px;
+	}
+	.item-email-wrap .orPhone a {
+    	color: #38F;
+	}
+	.item-phone-wrap .orEmail {
+    	position: absolute;
+    	right: 0px;
+    	bottom: 6px;
+    	font-size: 12px;
+    	
+	}
+	.item-phone-wrap .orEmail a {
+    	color: #38F;
+
+    	
+	}
+	
+	.email-suggest {
+    	position: absolute;
+    	border: 1px solid #CCC;
+    	z-index: 10;
+    	background: #FFF none repeat scroll 0% 0%;
+    	left: -1px;
+    	top: 52px;
+    	width: 100%;
+	}
+	.email-suggest li {
+    	height: 40px;
+    	line-height: 40px;
+    	padding-left: 130px;
+    	color: #333;
+    	padding-right: 12px;
+    	text-align: right;
+    	text-indent: -1000px;
+	}
+	.email-suggest li .value {
+    	overflow: hidden;
+	}
+	.suggest-container {
+    	display: none;
+	}
+	.suggest-container li {
+    	cursor: pointer;
+	}
+	ol, ul {
+    	list-style: outside none none;
+	}
+	#country_code_layer {
+    	font-family: "Microsoft YaHei";
+    	display: none;
+    	background-color: #FFF;
+    	text-align: center;
+    	height: 180px;
+    	width: 340px;
+    	position: absolute;
+    	cursor: default;
+    	z-index: 110;
+    	box-shadow: 0px 0px 2px 2px #EEE;
+    	border: 1px solid #EEE;
+    	padding-top: 4px;
+    	top: 62px;
+	}
+	#country_code_layer .arrow {
+    	display: block;
+    	position: absolute;
+    	background-image: url("//misc.360buyimg.com/user/reg/1.0.0/widget/foreign-number-layer-1130/i/tips.gif");
+    	background-repeat: no-repeat;
+    	width: 16px;
+    	height: 9px;
+    	background-position: 0px 0px;
+    	overflow: hidden;
+    	top: -9px;
+    	left: 50px;
+	}
+	#country_code_layer a {
+    	text-decoration: none;
+	}
+	
+	
+    

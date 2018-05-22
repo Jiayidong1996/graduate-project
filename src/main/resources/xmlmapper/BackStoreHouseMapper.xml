@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduate.project.mapper.StoreHouseMapper" >
+
+
+    <!-- 罗列所有订单粗略信息 -->
+    <select id="listStoreHouse" resultType="com.graduate.project.entity.StoreHouse">
+        SELECT * from storehouse
+    </select>
+
+    <!-- 根据ID查询原材料 -->
+    <select id="findStoreHouseById" parameterType="int" resultType="com.graduate.project.entity.StoreHouse">
+        SELECT * from storehouse where materialid=#{materialid}
+    </select>
+
+    <!-- 根据姓名查询原材料 -->
+    <select id="findStoreHouseByName" parameterType="string" resultType="com.graduate.project.entity.StoreHouse">
+        select * from storehouse where materialname=#{materialname}
+    </select>
+
+    <!-- 添加库存信息 -->
+    <insert id="insertStoreHouse" parameterType="com.graduate.project.entity.StoreHouse">
+        insert into storehouse
+        (storehouse.materialid,storehouse.materialname,storehouse.materialsurplus)
+        value(#{materialid},#{materialname},#{materialsurplus})
+    </insert>
+
+    <!-- 更新库存信息 -->
+    <update id="updateStoreHouse" parameterType="com.graduate.project.entity.StoreHouse">
+        UPDATE storehouse
+        set materialsurplus=#{materialsurplus},materialname=#{materialname}
+        WHERE materialid=#{materialid}
+    </update>
+
+    <!-- 删除库存信息 -->
+    <delete id="deleteStoreHouse" parameterType="int">
+        DELETE from storehouse WHERE materialid=#{materialid}
+    </delete>
+
+    <!--搜索库存信息-->
+    <select id="SearchStoreHouse" parameterType="String" resultType="com.graduate.project.entity.StoreHouse">
+        select * from storehouse
+        where materialname LIKE CONCAT(CONCAT('%',#{store},'%'))
+        OR materialid LIKE CONCAT(CONCAT('%',#{store},'%'))
+    </select>
+
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

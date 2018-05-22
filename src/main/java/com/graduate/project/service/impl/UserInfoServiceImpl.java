@@ -22,7 +22,6 @@ public class UserInfoServiceImpl implements UserInfoService{
     @Autowired
     private UserInfoMapper userInfoMapper;
 
-
     /**
      * 保存或更改用户信息
      * @param userInfo 用户信息

@@ -1,11 +1,8 @@
 package com.graduate.project.controller;
 
-import com.graduate.project.entity.UserTest;
-import com.graduate.project.service.backAdminService;
-import org.springframework.web.bind.annotation.RequestMapping;
+import com.graduate.project.service.BackAdminService;
 
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 
 
 public class UserTestController {
@@ -17,10 +14,10 @@ public class UserTestController {
     }*/
 
     @Resource
-    private backAdminService backAdminService;
+    private BackAdminService backAdminService;
 
     //点击登录  成功调转到主界面  失败 返回登录
-    @RequestMapping(value="/AdminIndex")
+   /* @RequestMapping(value="/AdminIndex")
     public String AdminIndex(UserTest userTest, HttpSession session) {
         //还缺少 判别管理员还是超级管理员 选择登录方法
         System.out.println("进入管理员登陆密码验证controller");
@@ -51,6 +48,6 @@ public class UserTestController {
         System.out.println("用户不存在");
 
         return "/UserTest01";
-    }
+    }*/
 }
 

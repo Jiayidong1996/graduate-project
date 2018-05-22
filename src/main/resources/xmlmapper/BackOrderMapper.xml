@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduate.project.mapper.OrderMapper" >
+
+    <!--通过ID查询订单粗略信息-->
+    <select id="findOrderById" parameterType="int" resultType="com.graduate.project.entity.Order">
+        SELECT * from `order WHERE orderid=#{orderid}
+    </select>
+
+    <!--通过ID查询订单详细信息-->
+    <select id="findOrderInfoById"  resultType="com.graduate.project.entity.OrderInfo">
+        SELECT * from orderinfo WHERE orderid=#{orderid}
+    </select>
+
+    <!-- 罗列所有订单粗略信息 -->
+    <select id="listOrder" resultType="com.graduate.project.entity.Order">
+        SELECT * from `order
+    </select>
+
+    <!-- 罗列所有订单详细信息 -->
+    <select id="listOrderInfo" resultType="com.graduate.project.entity.OrderInfo">
+        SELECT * from orderinfo
+    </select>
+
+    <!--添加订单粗略信息-->
+    <insert id="insertOrder" parameterType="com.graduate.project.entity.Order">
+        insert into `order
+        (`order.orderid,order.orderdate,order.ordertotalprice,order.ordercompanyid,order.ordercompanyname,order.orderperson)
+        value (#{orderid},#{orderdate},#{ordertotalprice},#{ordercompanyid},#{ordercompanyname},#{orderperson})
+    </insert>
+
+    <!--添加订单详细信息-->
+    <insert id="insertOrderInfo" parameterType="com.graduate.project.entity.OrderInfo">
+        insert into orderinfo
+        (orderinfo.orderid,orderinfo.materiaid,orderinfo.materianame,orderinfo.materiaprice,orderinfo.materianum)
+        value (#{orderid},#{materiaid},#{materianame},#{materiaprice},#{materianum})
+    </insert>
+
+    <!-- 通过订单id删除订单粗略信息 -->
+    <delete id="deleteOrder" parameterType="int">
+        DELETE from `order where orderid=#{orderid}
+    </delete>
+
+    <!-- 通过订单id删除订单详细信息 -->
+    <delete id="deleteOrderInfo" parameterType="int">
+        DELETE from orderinfo where orderid=#{orderid}
+    </delete>
+
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -12,6 +12,7 @@ import javax.annotation.Resource;
 @Controller
 @RequestMapping("")
 public class UserController {
+    //用户
     @Resource
     private UserService userService;
 
@@ -20,10 +21,10 @@ public class UserController {
         int id=1;
         User user=this.userService.findUserById(id);
         model.addAttribute("user",user);
-        return "index";
+        return "/index";
     }
 
-    @RequestMapping("/index")
+   @RequestMapping("/index")
     public String index(Model model){
         int id=1;
         User user=this.userService.findUserById(id);
@@ -32,4 +33,8 @@ public class UserController {
         model.addAttribute("user",user);
         return "/userInfo";
     }
+
+
+
+
 }

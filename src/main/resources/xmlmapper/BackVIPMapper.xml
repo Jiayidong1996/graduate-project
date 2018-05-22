@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduate.project.mapper.VIPMapper" >
+
+    <!--通过ID查询会员信息-->
+    <select id="findVIPById" parameterType="int" resultType="com.graduate.project.entity.VIP">
+        SELECT * from vip WHERE vipid=#{vipid}
+    </select>
+
+    <!-- 更改会员信息-->
+    <update id="updateVIP" parameterType="com.graduate.project.entity.VIP">
+        UPDATE vip
+        set vipname=#{vipname},vipphone=#{vipphone},vipbalance=#{vipbalance},vipdiscount=#{vipdiscount},vipaddress=#{vipaddress},vipbirth=#{vipbirth}
+        WHERE vipid=#{vipid}
+    </update>
+
+    <!-- 罗列所有会员信息 -->
+    <select id="listVIP" resultType="com.graduate.project.entity.VIP">
+        SELECT * from vip
+    </select>
+
+    <!--添加会员-->
+    <insert id="insertVIP" parameterType="com.graduate.project.entity.VIP">
+        insert into vip
+        (vip.vipid,vip.vipname,vip.vipphone,vip.vipbalance,vip.vipdiscount,vip.vipaddress,vip.vipbirth)
+        value (#{vipid},#{vipname},#{vipphone},#{vipbalance},#{vipdiscount},#{vipaddress},#{vipbirth})
+    </insert>
+
+    <!-- 通过会员id删除会员信息 -->
+    <delete id="deleteVIP" parameterType="int">
+        DELETE from vip where vipid=#{vipid}
+    </delete>
+
+
+</mapper>

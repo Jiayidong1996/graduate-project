@@ -121,6 +121,14 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.41</version>
         </dependency>
+
+        <!--c标签-->
+        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
     </dependencies>
 
 

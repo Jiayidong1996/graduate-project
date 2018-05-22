@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduate.project.mapper.AdminMapper" >
+
+    <!--通过ID查询管理员信息-->
+    <select id="findAdminById" parameterType="int" resultType="com.graduate.project.entity.Admin">
+        SELECT * FROM admin WHERE adminid=#{adminid}
+    </select>
+
+    <!--通过ID查询管理员详细信息-->
+    <select id="findAdminInfoById" parameterType="int" resultType="com.graduate.project.entity.AdminInfo">
+        SELECT * FROM admininfo WHERE adminid=#{adminid}
+    </select>
+
+    <!-- 更改管理员密码和权限 不过权限目前还没用上  更新管理员信息-->
+    <update id="updateAdmin" parameterType="com.graduate.project.entity.Admin">
+        update admin set adminpass =#{adminpass},limits=#{limits} where adminid=#{adminid}
+
+    </update>
+
+    <!-- 更新详细的用户信息 -->
+    <update id="updateAdminInfo" parameterType="com.graduate.project.entity.AdminInfo">
+        update admininfo
+        set adminpass=#{adminpass},adminname=#{adminname},truename=#{truename},adminphone=#{adminphone},
+        adminmail=#{adminmail},adminaddress=#{adminaddress},adminsalary=#{adminsalary},limits=#{limits}
+        where adminid=#{adminid}
+    </update>
+
+    <!-- 罗列所有管理员信息 -->
+    <select id="listAdmin" resultType="com.graduate.project.entity.Admin">
+        select * from admin
+    </select>
+
+    <!-- 罗列所有的管理员的详细信息 -->
+    <select id="listAdminInfo" resultType="com.graduate.project.entity.AdminInfo">
+        select * from admininfo
+    </select>
+
+    <!-- 添加管理员信息
+    先添加管理员id和密码
+    再添加管理员详细信息 -->
+    <!--添加管理员id和密码-->
+    <insert id="insertAdmin" parameterType="com.graduate.project.entity.Admin">
+        insert into admin
+        (admin.adminid,admin.adminpass,admin.limits)
+        value (#{adminid},#{adminpass},#{limits})
+    </insert>
+
+    <!-- 添加管理员的详细信息 -->
+    <insert id="insertAdminInfo" parameterType="com.graduate.project.entity.AdminInfo">
+        insert into admininfo
+        (adminid,adminpass,adminname,truename,adminphone,adminmail,adminaddress,adminsalary,limits)
+        value (#{adminid},#{adminpass},#{adminname},#{truename},#{adminphone},#{adminmail},#{adminaddress},#{adminsalary},#{limits})
+    </insert>
+
+    <!-- 通过管理员id删除管理员信息 -->
+    <delete id="deleteAdminById" parameterType="int">
+        delete from admin where adminid=#{adminid}
+    </delete>
+
+    <!-- 通过管理员id删除管理员详细信息 -->
+    <delete id="deleteAdminInfoById" parameterType="int">
+        delete from admininfo where adminid=#{adminid}
+    </delete>
+
+</mapper>

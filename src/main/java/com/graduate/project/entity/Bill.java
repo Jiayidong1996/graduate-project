@@ -1,7 +1,7 @@
 package com.graduate.project.entity;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Date;
 
 public class Bill {
     private Integer billid;

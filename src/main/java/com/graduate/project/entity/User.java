@@ -1,8 +1,20 @@
 package com.graduate.project.entity;
 
+
+import java.sql.Date;
+
 public class User {
     private int id;
     private String  username;
+    private Date birthday;
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(Date birthday) {
+        this.birthday = birthday;
+    }
 
     public int getId() {
         return id;
@@ -13,7 +25,6 @@ public class User {
     }
 
     public String getUsername() {
-
 
      return username;
     }
@@ -27,6 +38,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
+                ", birthday=" + birthday +
                 '}';
     }
 }

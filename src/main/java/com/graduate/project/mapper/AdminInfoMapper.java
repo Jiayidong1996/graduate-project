@@ -28,4 +28,6 @@ public interface AdminInfoMapper {
     int updateByPrimaryKeySelective(AdminInfo record);
 
     int updateByPrimaryKey(AdminInfo record);
+
+
 }
