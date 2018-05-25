@@ -1,7 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 
 <%String path =request.getContextPath();
     String basepath=request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";%>
@@ -205,7 +204,6 @@
                 <img  src="<%=basepath %>pic/${desk.value.deskstate}.jpg" />
                 <%--<div style="position:relative;width:20px;height:20px;z-indent:2;left:80px;top:80px;">--%>
                     <c:out value="${desk.value.deskId}">
-
                     </c:out>
                     <c:out value="${desk.value.deskname}">
 
@@ -231,7 +229,7 @@
 
 <footer class="footer">
     <div class="container">
-        <input class="btn btn-order radius" type="button" value="开台">
+        <a href="<%=basepath%>FrontDeskStateInfo.action"><input class="btn btn-order radius" type="button" value="开台"></a>
         <input class="btn btn-reserve radius" type="button" value="预定">
         <input class="btn btn-search radius" type="button" value="查询">
         <input class="btn btn-pay radius" type="button" value="付款">

@@ -1,0 +1,94 @@
+.btn-succeed
+{
+    color: #fff;
+    background-color: #5eb95e;
+    border-color: #5eb95e;
+}
+.button
+{
+    display: inline-block;
+    box-sizing:border-box;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: solid 1px #ddd;
+    width: auto;
+    transition:background-color .1s linear;
+    font-size: 16px;
+    height: 36px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    float: right!important;
+    text-decoration: none;
+}
+.btn-success
+{
+    color: #fff;
+    background-color:#5eb95e;
+    border-color: #5eb95e;
+    margin-top: 20px;
+}
+.buttons
+{
+    color: #fff;
+    display: inline-block;
+    box-sizing:border-box;
+    cursor:pointer;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    border:solid 1px #ddd ;
+    font-size: 16px;
+    height: 36px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.AddAdmin
+{
+    background-color: #f5fafe;
+    border: solid 1px #eee;
+    padding: 5px;
+    margin-top: 20px;
+    zoom:1;
+    height: 38px;
+}
+.add
+{
+    float: left!important;
+}
+.btn
+{
+    line-height: 21px;
+    background-color: #06c;
+    border-color: #06c;
+    color: #fff;
+    display: inline-block;
+    box-sizing:border-box;
+    cursor:pointer;
+    text-align: center;
+    font-weight: 400;
+    white-space: nowrap;
+    vertical-align: middle;
+    border:solid 1px #ddd ;
+    font-size: 16px;
+    height: 36px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.btn:hover
+{
+    color: #fff;
+    background-color: #0a6999;
+    border-color: #0a6999;
+}
+.dataAll
+{
+    float: right!important;
+    zoom:1;
+    text-align: center;
+}

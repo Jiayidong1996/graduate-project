@@ -57,7 +57,6 @@
             margin-top: 20px;
             font-family:  "Microsoft Yahei","Hiragino Sans GB","Helvetica Neue",Helvetica,tahoma,arial,"WenQuanYi Micro Hei",Verdana,sans-serif,"\5B8B\4F53";
         }
-
         .middle
         {
             width: 100%;
@@ -70,7 +69,6 @@
             vertical-align: middle;
             border-color: inherit;
         }
-
         .sorting
         {
             background-color: #88BECC;

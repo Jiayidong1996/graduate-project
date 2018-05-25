@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.graduate.project.mapper.TBillMapper" >
+   <!--向数据库中插入一条临时单据信息-->
+    <insert id="insertTBill" parameterType="com.graduate.project.entity.TBill">
+        insert into tbill
+        (tbill.tbillid,tbill.deskId,tbill.tbillremark)
+        VALUE (null,#{deskId},null)
+    </insert>
+
+    <!--在临时菜单中选出订单号，根据桌号信息-->
+    <select id="selectTBillId" parameterType="int" resultType="int">
+        SELECT tbillid from tbill where deskId=#{deskId}
+    </select>
+
+    <!--向数据库中插入一条临时信息 对应表tbillinfo-->
+    <insert id="insertTBillInfo" parameterType="com.graduate.project.entity.TBillInfo">
+        insert into tbillinfo
+        (tbillinfo.tbillid,tbillinfo.dishid,tbillinfo.dishnum)
+        VALUE (#{tbillid},#{dishid},#{dishnum})
+    </insert>
+
+</mapper>
